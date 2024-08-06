@@ -88,14 +88,58 @@ textarea:not([rows]) {
     --clr-neutral-300: hsl(0, 0%, 81%);
     /* ------ TYPOGRAPHY ------ */
     /* Font-family */
-    --ff-primary: 'Barlow', sans-serif;
+    --ff-primary: "Barlow Semi Condensed", sans-serif;
     /* Font-size */
     --fs-100: .6875rem;
     --fs-200: .8125rem;
     --fs-600: 1.25rem;
+    /* Font-weight */
+    --fw-500: 500;
+    --fw-600: 600;
     /* Line-height */
     --lh-100: 1;
     --lh-200: 1.2;
     --lh-300: 1.4;
+    /* ------ SPACING ------ */
+    /* px to rem */
+    --rem-4: .25rem;
+    --rem-16: 1rem;
+    --rem-18: 1.125rem;
+    --rem-72: 4.5rem;
+    --rem-24: 1.5rem;
+    --rem-26: 1.625rem;
+    --rem-32: 2rem;
+    --rem-40: 2.5rem;
+}
 
+/* Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+
+/* ------ LAYOUT ------ */
+body {
+    font-family: var(--ff-primary);
+    background: var(--clr-neutral-200);
+}
+
+.testimonial-wrapper {
+    display: grid;
+    gap: var(--rem-24);
+    margin-block: var(--rem-72);
+    margin-inline: var(--rem-24);
+}
+
+.testimonial {
+    --_bg: var(--bg, var(--clr-neutral-200));
+    display: flex;
+    flex-direction: column;
+    gap: var(--rem-18);
+    padding-block: 1.625em 2em;
+    padding-inline: 2em;
+}
+
+.author-wrapper {
+    display: flex;
+    gap: var(--rem-16);
 }
