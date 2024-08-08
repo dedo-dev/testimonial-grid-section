@@ -209,11 +209,16 @@ body {
   --clr: var(--clr-primary-50);
 }
 
-.title-light {
+.testimonial--dark-blue {
+  --bg: var(--clr-primary-900);
+  --clr: var(--clr-primary-50);
+}
+
+.title-white {
   --clr: var(--clr-primary-100);
 }
 
-.copy-light {
+.copy-white {
   --clr: var(--clr-primary-25);
 }
 
