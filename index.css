@@ -130,9 +130,11 @@ textarea:not([rows]) {
 body {
   font-family: var(--ff-primary);
   background: var(--clr-neutral-200);
+  margin: 0;
 }
 
 .container {
+  container: container / inline-size;
   max-width: 1100px;
   margin-inline: auto;
 }
@@ -196,6 +198,49 @@ body {
 
 .testimonial__copy {
   margin-block-start: var(--rem-16);
+}
+
+/* @container container (width > 500px) {
+  .testimonial-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    background: red;
+  }
+
+  .testimonial--violet {
+    grid-column: span 3;
+  }
+
+  .testimonial--grey {
+    grid-column: span 2;
+    grid-row: 3 / 4;
+  }
+
+  .testimonial--dark-blue {
+    grid-column: span 2;
+    grid-row: 2;
+  }
+} */
+
+@container container (width > 500px) {
+  .testimonial-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    /* background: red; */
+  }
+
+  .testimonial--violet {
+    grid-column: span 2;
+  }
+
+  .testimonial--grey {
+    grid-column: 3;
+    /* grid-row: 1; */
+  }
+
+  .testimonial--dark-blue {
+    grid-column: 2 / 4;
+    /* grid-row: 2; */
+  }
 }
 
 /* ------ UTILITY ------ */
