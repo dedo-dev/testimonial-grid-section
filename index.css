@@ -237,6 +237,16 @@ body {
   .g-item-5 {
     grid-column: span 2;
   }
+
+  .g-item-1 > .testimonial__copy {
+    margin-block-start: var(--px-16);
+  }
+
+  .g-item-3 > .testimonial__copy,
+  .g-item-4 > .testimonial__copy,
+  .g-item-5 > .testimonial__copy {
+    margin-block-start: var(--px-24);
+  }
 }
 
 @container container (width > 1000px) {
